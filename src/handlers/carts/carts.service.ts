@@ -19,7 +19,7 @@ export class CartsService {
   average() {
     return this.utilsService.average([1, 2, 3]);
   }
-
+  /*eslint-disable */
   create(createCartDto: CreateCartDto) {
     return 'This action adds a new cart';
   }

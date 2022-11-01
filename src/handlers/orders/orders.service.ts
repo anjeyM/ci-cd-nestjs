@@ -18,11 +18,11 @@ export class OrdersService {
   ) {
     console.log(`Current env: ${configService.appConfig.env}`);
   }
-
+  /*eslint-disable */
   create(orderDto): Promise<any> {
     const orderDate = Date.now();
     const orderId = Buffer.from(`${orderDate}`, 'utf-8').toString('base64');
-
+  
     return new Promise<any>((resolve, reject) => {
       this.awsSQS.sendMessage(
         {
