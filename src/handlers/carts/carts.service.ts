@@ -11,13 +11,13 @@ export class CartsService {
     private readonly configService: ConfigService,
 
     @Inject('DateService')
-    private readonly DateService,
+    private readonly DateService
   ) {
     console.log(`Current env: ${configService.appConfig.env}`);
   }
 
   average() {
-    return this.utilsService.average([1,2,3]);
+    return this.utilsService.average([1, 2, 3]);
   }
 
   create(createCartDto: CreateCartDto) {

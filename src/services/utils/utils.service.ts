@@ -7,7 +7,7 @@ export class UtilsService {
     private readonly constants,
 
     @Inject('DateService')
-    private readonly dateService,
+    private readonly dateService
   ) {
     console.log('Utility service was created');
     console.log(dateService.getTimeFromStart());
