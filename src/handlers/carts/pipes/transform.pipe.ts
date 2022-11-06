@@ -3,7 +3,6 @@ import { CreateCartDto, CreateCartDtoValid } from '../dto/create-cart.dto';
 
 @Injectable()
 export class TransformPipe implements PipeTransform {
-
   transform(value: CreateCartDto): CreateCartDtoValid {
     return {
       balance: +value.balance || 0,

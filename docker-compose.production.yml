@@ -1,0 +1,14 @@
+services:
+  api:
+    build:
+      dockerfile: Dockerfile
+      context: .
+      # Only will build production stage from our dockerfile
+      target: production
+    volumes:
+      - .:/usr/src/app
+    env_file:
+    - .env
+    # Push to docker hub
+    command: docker push "${DOCKER_HUB_USER}"/"${REPO_NAME}"
+
